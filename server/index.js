@@ -11,6 +11,7 @@ import NavigationRouter     from './api/falcor/routers/navigation';
 import UserRouter           from './api/falcor/routers/user';
 
 var userRouter = require('./routers/user');
+var pagesRouter = require('./routers/pages');
 
 import chatFactory from './routers/chat';
 var chatRouter = chatFactory(io);
@@ -29,6 +30,7 @@ app.use('/user/model.json',         FalcorServer.dataSourceRoute(() => new UserR
 // page '/user'
 app.use('/', userRouter);
 app.use('/', chatRouter);
+app.use('/', pagesRouter);
 
 // static pages
 app.use(express.static('./public'));

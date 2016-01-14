@@ -1,20 +1,20 @@
 {
-  "name": "falcor-socket-adapter",
+  "name": "falcor-router-isomorphic",
   "version": "0.0.0",
   "author": {
     "name": "Denis Savenok",
     "email": "denissavenok@gmail.com"
   },
-  "homepage": "https://github.com/designeng/falcor-socket-adapter",
-  "description": "adapter for socket.io - falcor model interaction",
+  "homepage": "https://github.com/designeng/falcor-router-isomorphic",
+  "description": "falcor-router-isomorphic: experiments",
   "keywords": [
     "react",
     "falcor",
-    "socket.io"
+    "rect-router"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/designeng/falcor-socket-adapter"
+    "url": "git://github.com/designeng/falcor-router-isomorphic"
   },
   "scripts": {
     "build": "webpack --watch --config webpack.config.js",

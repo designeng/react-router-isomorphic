@@ -4,6 +4,7 @@ export default class One extends React.Component {
 
     constructor() {
         super();
+        console.log("ONE component");
     }
 
     render() {
