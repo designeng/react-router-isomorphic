@@ -1,7 +1,5 @@
 ###Description
-`@TODO:` change repo name?
-
-socket.io - falcor model mediator
+Experiments with React.Router isomorphic rendering
 
 ###Example
 ```
