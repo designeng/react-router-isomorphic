@@ -27,10 +27,12 @@
   "main": "dist/index.js",
   "dependencies": {
     "connect-data-decorator": "git://github.com/designeng/connect-data-decorator#master",
+    "history": "^2.0.0-rc1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-router": "^1.0.3",
-    "history": "^2.0.0-rc1"
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
