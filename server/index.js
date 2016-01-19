@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var webpack = require('webpack');
 
 var FalcorServer = require('falcor-express');
 
@@ -34,6 +35,17 @@ app.use('/', pagesRouter);
 
 // static pages
 app.use(express.static('./public'));
+
+var webpackConfig = require(process.env.WEBPACK_CONFIG ? process.env.WEBPACK_CONFIG : '../webpack.config');
+var compiler = webpack(webpackConfig);
+
+app.use(require("webpack-dev-middleware")(compiler, {
+    noInfo: true, publicPath: webpackConfig.output.publicPath
+}));
+
+app.use(require("webpack-hot-middleware")(compiler, {
+    log: console.info, path: '/__webpack_hmr', heartbeat: 10 * 1000
+}));
 
 /* 404 */
 app.use(function(req, res, next) {

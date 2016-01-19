@@ -1,8 +1,15 @@
 var LiveReloadPlugin = require('webpack-livereload-plugin');
+var webpack = require('webpack');
 
 module.exports = {
-    entry: __dirname + '/example/index.js',
+    context: __dirname,
+    entry: [
+        'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+        __dirname + '/example/index.js'
+    ],
     output: {
+        path: __dirname,
+        publicPath: '/',
         filename: './public/build/bundle.js'
     },
     module: {
@@ -15,7 +22,8 @@ module.exports = {
         ]
     },
     plugins: [
-        new LiveReloadPlugin({port: 8081})
+        new webpack.HotModuleReplacementPlugin()
+        // new LiveReloadPlugin({port: 8081})
     ],
     devtool: 'source-map'
 }
