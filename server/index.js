@@ -44,7 +44,7 @@ app.use(require("webpack-dev-middleware")(compiler, {
 }));
 
 app.use(require("webpack-hot-middleware")(compiler, {
-    log: console.info, path: '/__webpack_hmr', heartbeat: 10 * 1000
+    log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
 }));
 
 /* 404 */
