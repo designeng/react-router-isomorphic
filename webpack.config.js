@@ -1,4 +1,3 @@
-var LiveReloadPlugin = require('webpack-livereload-plugin');
 var webpack = require('webpack');
 
 module.exports = {
@@ -22,10 +21,9 @@ module.exports = {
         ]
     },
     plugins: [
-        // new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
-        // new LiveReloadPlugin({port: 8081})
+        new webpack.NoErrorsPlugin()
     ],
     // recordsPath: './records.json',
     devtool: 'source-map'

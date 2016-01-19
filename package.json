@@ -8,6 +8,8 @@
   "homepage": "https://github.com/designeng/hot-module-replacement-experiment",
   "description": "hot-module-replacement-experiment",
   "keywords": [
+    "webpack",
+    "hot-module-replacement"
   ],
   "repository": {
     "type": "git",
